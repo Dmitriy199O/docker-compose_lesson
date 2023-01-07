@@ -11,6 +11,6 @@ jobs:
       - name: docker login
         run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_NAME }} --password-stdin
       - name: docker push
-        run: docker push -t dmkarpiy/skypro_lesson_docker_app:$GITHUB_REF_NAME-$GITHUB_RUN_ID
+        run: docker push dmkarpiy/skypro_lesson_docker_app:$GITHUB_REF_NAME-$GITHUB_RUN_ID
 
 
